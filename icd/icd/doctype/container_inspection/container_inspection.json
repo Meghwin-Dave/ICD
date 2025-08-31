@@ -1,0 +1,237 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-30 22:54:49.018757",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_iw6h",
+  "amended_from",
+  "in_yard_container_booking",
+  "driver_name",
+  "column_break_kebu",
+  "c_and_f_company",
+  "clearing_agent",
+  "consignee",
+  "container_size",
+  "column_break_jimx",
+  "container_id",
+  "m_bl_no",
+  "container_no",
+  "column_break_wddh",
+  "company",
+  "posting_datetime",
+  "current_location",
+  "inspection_details_section",
+  "inspection_name",
+  "inspection_results",
+  "column_break_bcfc",
+  "inspection_date",
+  "inspection_comments",
+  "post_inspection_location_section",
+  "new_container_location",
+  "column_break_nzjo",
+  "additional_note",
+  "service_details_tab",
+  "service",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_iw6h",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Container Inspection",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "in_yard_container_booking",
+   "fieldtype": "Link",
+   "label": "In Yard Container Booking",
+   "options": "In Yard Container Booking"
+  },
+  {
+   "fieldname": "driver_name",
+   "fieldtype": "Link",
+   "label": "Driver Name",
+   "options": "Driver"
+  },
+  {
+   "fieldname": "column_break_kebu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "c_and_f_company",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "C & F Company",
+   "options": "Cleaning and Forward Company"
+  },
+  {
+   "fieldname": "clearing_agent",
+   "fieldtype": "Link",
+   "label": "Clearing Agent",
+   "options": "Clearing Agent"
+  },
+  {
+   "fieldname": "consignee",
+   "fieldtype": "Link",
+   "label": "Consignee",
+   "options": "Consignee"
+  },
+  {
+   "fieldname": "container_size",
+   "fieldtype": "Data",
+   "label": "Container Size"
+  },
+  {
+   "fieldname": "column_break_jimx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wddh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "container_id",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Container ID",
+   "options": "Container Details"
+  },
+  {
+   "fieldname": "m_bl_no",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "M BL No"
+  },
+  {
+   "fieldname": "container_no",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Container No."
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "posting_datetime",
+   "fieldtype": "Datetime",
+   "label": "Posting DateTime"
+  },
+  {
+   "fetch_from": "container_id.current_location",
+   "fieldname": "current_location",
+   "fieldtype": "Link",
+   "label": "Current Location",
+   "options": "Container Location"
+  },
+  {
+   "fieldname": "inspection_details_section",
+   "fieldtype": "Section Break",
+   "label": "Inspection Details"
+  },
+  {
+   "fieldname": "inspection_name",
+   "fieldtype": "Data",
+   "label": "Inspection Name"
+  },
+  {
+   "fieldname": "column_break_bcfc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inspection_date",
+   "fieldtype": "Date",
+   "label": "Inspection Date"
+  },
+  {
+   "fieldname": "inspection_results",
+   "fieldtype": "Small Text",
+   "label": "Inspection Results"
+  },
+  {
+   "fieldname": "inspection_comments",
+   "fieldtype": "Small Text",
+   "label": "Inspection Comments"
+  },
+  {
+   "fieldname": "post_inspection_location_section",
+   "fieldtype": "Section Break",
+   "label": "Post Inspection Location"
+  },
+  {
+   "fieldname": "new_container_location",
+   "fieldtype": "Link",
+   "label": "New Container Location",
+   "options": "Container Location"
+  },
+  {
+   "fieldname": "column_break_nzjo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "additional_note",
+   "fieldtype": "Small Text",
+   "label": "Additional Note"
+  },
+  {
+   "fieldname": "service_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Service Details"
+  },
+  {
+   "fieldname": "service",
+   "fieldtype": "Table",
+   "label": "Service",
+   "options": "Service"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "ICD-CI-.YYYY.-"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-31 10:53:26.699434",
+ "modified_by": "Administrator",
+ "module": "ICD",
+ "name": "Container Inspection",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,289 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-30 23:32:47.846685",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_hzjw",
+  "amended_from",
+  "manifest",
+  "vessel_name",
+  "column_break_hqgh",
+  "voyage_no",
+  "ship_dc_date",
+  "column_break_ggca",
+  "company",
+  "submitted_time",
+  "naming_series",
+  "section_break_vdvr",
+  "container_id",
+  "m_bl_no",
+  "sline",
+  "column_break_agwr",
+  "container_no",
+  "size",
+  "seal_no",
+  "container_status",
+  "column_break_woxv",
+  "c_and_f_company",
+  "clearing_agent",
+  "tafer_id",
+  "consignee",
+  "column_break_lokj",
+  "is_empty_container",
+  "good_decription",
+  "transporter_details_section",
+  "transporter",
+  "column_break_jbil",
+  "truck",
+  "trailer",
+  "column_break_uqxu",
+  "driver",
+  "license_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_hzjw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gatepass",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "manifest",
+   "fieldtype": "Link",
+   "label": "Manifest",
+   "options": "Manifest"
+  },
+  {
+   "fetch_from": "manifest.vessel_name",
+   "fieldname": "vessel_name",
+   "fieldtype": "Data",
+   "label": "Vessel Name"
+  },
+  {
+   "fieldname": "column_break_hqgh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "manifest.voyage",
+   "fieldname": "voyage_no",
+   "fieldtype": "Data",
+   "label": "Voyage No"
+  },
+  {
+   "fetch_from": "manifest.arrival_date",
+   "fieldname": "ship_dc_date",
+   "fieldtype": "Date",
+   "label": "Ship D/C Date"
+  },
+  {
+   "fieldname": "column_break_ggca",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "manifest.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "submitted_time",
+   "fieldtype": "Time",
+   "label": "Submitted Time"
+  },
+  {
+   "fieldname": "section_break_vdvr",
+   "fieldtype": "Section Break",
+   "label": "Container details"
+  },
+  {
+   "fieldname": "container_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Container ID",
+   "options": "Container Details",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "container_id.m_bl_no",
+   "fieldname": "m_bl_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "M BL No"
+  },
+  {
+   "fetch_from": "container_id.sline",
+   "fieldname": "sline",
+   "fieldtype": "Data",
+   "label": "Sline"
+  },
+  {
+   "fieldname": "column_break_agwr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "container_id.container_no",
+   "fieldname": "container_no",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Container No"
+  },
+  {
+   "fetch_from": "container_id.seal_no1",
+   "fieldname": "seal_no",
+   "fieldtype": "Data",
+   "label": "Seal No"
+  },
+  {
+   "fieldname": "container_status",
+   "fieldtype": "Data",
+   "label": "Container Status"
+  },
+  {
+   "fieldname": "column_break_woxv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "c_and_f_company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "C and F Company",
+   "options": "Cleaning and Forward Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "clearing_agent",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Clearing Agent",
+   "options": "Clearing Agent",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tafer_id",
+   "fieldtype": "Data",
+   "label": "Tafer ID"
+  },
+  {
+   "fetch_from": "container_id.consignee",
+   "fieldname": "consignee",
+   "fieldtype": "Link",
+   "label": "Consignee",
+   "options": "Consignee"
+  },
+  {
+   "fieldname": "column_break_lokj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_empty_container",
+   "fieldtype": "Check",
+   "label": "Is Empty Container"
+  },
+  {
+   "fieldname": "good_decription",
+   "fieldtype": "Small Text",
+   "label": "Good Decription"
+  },
+  {
+   "fieldname": "transporter_details_section",
+   "fieldtype": "Section Break",
+   "label": "Transporter Details"
+  },
+  {
+   "fieldname": "transporter",
+   "fieldtype": "Link",
+   "label": "Transporter",
+   "options": "Transporter"
+  },
+  {
+   "fieldname": "column_break_jbil",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "truck",
+   "fieldtype": "Link",
+   "label": "Truck",
+   "options": "Vehicle"
+  },
+  {
+   "fieldname": "trailer",
+   "fieldtype": "Link",
+   "label": "Trailer",
+   "options": "Vehicle"
+  },
+  {
+   "fieldname": "column_break_uqxu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "options": "Driver"
+  },
+  {
+   "fetch_from": "driver.license_number",
+   "fieldname": "license_no",
+   "fieldtype": "Data",
+   "label": "License No"
+  },
+  {
+   "fetch_from": "container_id.size_ft",
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "label": "Size"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "ICD-GP-.YYYY.-"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-31 13:00:50.839450",
+ "modified_by": "Administrator",
+ "module": "ICD",
+ "name": "Gatepass",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

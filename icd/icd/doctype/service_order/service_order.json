@@ -1,0 +1,239 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-30 23:14:15.990118",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_hgbj",
+  "amended_from",
+  "company",
+  "column_break_ypfm",
+  "c_and_f_company",
+  "clearing_agent",
+  "column_break_ddcd",
+  "consignee",
+  "posting_datetime",
+  "section_break_iddw",
+  "manifest",
+  "vessel_name",
+  "port",
+  "column_break_pomh",
+  "container_id",
+  "place_of_destination",
+  "country_of_destination",
+  "column_break_culs",
+  "m_bl_no",
+  "container_no",
+  "container_seal",
+  "column_break_aujs",
+  "container_size",
+  "container_status",
+  "container_location",
+  "gross_volume",
+  "service_details_tab",
+  "service",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_hgbj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Service Order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_ypfm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "c_and_f_company",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "C and F company",
+   "options": "Cleaning and Forward Company"
+  },
+  {
+   "fieldname": "clearing_agent",
+   "fieldtype": "Link",
+   "label": "Clearing Agent",
+   "options": "Clearing Agent"
+  },
+  {
+   "fieldname": "column_break_ddcd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consignee",
+   "fieldtype": "Link",
+   "label": "Consignee",
+   "options": "Consignee"
+  },
+  {
+   "fieldname": "posting_datetime",
+   "fieldtype": "Datetime",
+   "label": "Posting DateTime"
+  },
+  {
+   "fieldname": "section_break_iddw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "manifest",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Manifest",
+   "options": "Manifest"
+  },
+  {
+   "fetch_from": "container_id.manifest",
+   "fieldname": "vessel_name",
+   "fieldtype": "Data",
+   "label": "Vessel Name"
+  },
+  {
+   "fetch_from": "manifest.port",
+   "fieldname": "port",
+   "fieldtype": "Select",
+   "label": "Port",
+   "options": "\nTEAGTL\nDP World"
+  },
+  {
+   "fieldname": "column_break_pomh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "container_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Container ID",
+   "options": "Container Details",
+   "reqd": 1
+  },
+  {
+   "description": "For storage Charge Validation",
+   "fetch_from": "container_id.place_of_destination",
+   "fieldname": "place_of_destination",
+   "fieldtype": "Data",
+   "label": "Place of Destination"
+  },
+  {
+   "description": "for corrider levy validation",
+   "fetch_from": "container_id.country",
+   "fieldname": "country_of_destination",
+   "fieldtype": "Link",
+   "label": "Country of Destination",
+   "options": "Country"
+  },
+  {
+   "fieldname": "column_break_culs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "container_id.m_bl_no",
+   "fieldname": "m_bl_no",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "M B/L No"
+  },
+  {
+   "fetch_from": "container_id.container_no",
+   "fieldname": "container_no",
+   "fieldtype": "Data",
+   "label": "Container No"
+  },
+  {
+   "fieldname": "container_seal",
+   "fieldtype": "Data",
+   "label": "Container Seal"
+  },
+  {
+   "fieldname": "column_break_aujs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "container_size",
+   "fieldtype": "Data",
+   "label": "Container Size"
+  },
+  {
+   "fieldname": "container_status",
+   "fieldtype": "Data",
+   "label": "Container Status"
+  },
+  {
+   "fetch_from": "container_id.current_location",
+   "fieldname": "container_location",
+   "fieldtype": "Data",
+   "label": "Container Location"
+  },
+  {
+   "fieldname": "gross_volume",
+   "fieldtype": "Data",
+   "label": "Gross Volume"
+  },
+  {
+   "fieldname": "service_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Service Details"
+  },
+  {
+   "fieldname": "service",
+   "fieldtype": "Table",
+   "label": "Service",
+   "options": "Detail service"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "ICD-SO-.YYYY.-"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-31 10:52:24.417424",
+ "modified_by": "Administrator",
+ "module": "ICD",
+ "name": "Service Order",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

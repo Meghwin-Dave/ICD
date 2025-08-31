@@ -1,0 +1,265 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-30 20:50:06.081955",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_6bny",
+  "amended_from",
+  "company",
+  "posting_datetime",
+  "column_break_utoq",
+  "c_and_f_company",
+  "clearing_agent",
+  "consignee",
+  "column_break_mjrn",
+  "container_id",
+  "m_bl_no",
+  "container_no",
+  "naming_series",
+  "column_break_tolo",
+  "container_size",
+  "cargo_description",
+  "inspection_scheduling_section",
+  "inspection_date",
+  "column_break_jbvu",
+  "inspection_location",
+  "handling_and_charges_section",
+  "has_stripping_charges",
+  "column_break_bftj",
+  "has_custom_verification",
+  "documents_section",
+  "documents",
+  "record_keeping_section",
+  "inspection_log",
+  "column_break_jnzy",
+  "movement_log",
+  "notifications_section",
+  "notify_clearing_agent",
+  "notify_consignee",
+  "notification_method"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_6bny",
+   "fieldtype": "Section Break",
+   "label": "Booking Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "In Yard Container Booking",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "posting_datetime",
+   "fieldtype": "Datetime",
+   "label": "Posting DateTime"
+  },
+  {
+   "fieldname": "column_break_utoq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "c_and_f_company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "C & F Company",
+   "options": "Cleaning and Forward Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "clearing_agent",
+   "fieldtype": "Link",
+   "label": "Clearing Agent",
+   "options": "Clearing Agent"
+  },
+  {
+   "fieldname": "consignee",
+   "fieldtype": "Link",
+   "label": "Consignee",
+   "options": "Consignee"
+  },
+  {
+   "fieldname": "column_break_mjrn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "container_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Container ID",
+   "options": "Container Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "m_bl_no",
+   "fieldtype": "Data",
+   "label": "M BL No."
+  },
+  {
+   "fetch_from": "container_id.container_no",
+   "fieldname": "container_no",
+   "fieldtype": "Data",
+   "label": "Container No."
+  },
+  {
+   "fieldname": "column_break_tolo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "container_size",
+   "fieldtype": "Data",
+   "label": "Container Size"
+  },
+  {
+   "fieldname": "cargo_description",
+   "fieldtype": "Small Text",
+   "label": "Cargo Description"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "ICD-IYCB-.YYYY.-"
+  },
+  {
+   "fieldname": "inspection_scheduling_section",
+   "fieldtype": "Section Break",
+   "label": "Inspection Scheduling"
+  },
+  {
+   "fieldname": "inspection_date",
+   "fieldtype": "Date",
+   "label": "Inspection Date"
+  },
+  {
+   "fieldname": "column_break_jbvu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inspection_location",
+   "fieldtype": "Link",
+   "label": "Inspection Location",
+   "options": "Container Location"
+  },
+  {
+   "fieldname": "handling_and_charges_section",
+   "fieldtype": "Section Break",
+   "label": "Handling and Charges"
+  },
+  {
+   "fieldname": "has_stripping_charges",
+   "fieldtype": "Select",
+   "label": "Has Stripping Charges",
+   "options": "Yes\nNo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_bftj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "has_custom_verification",
+   "fieldtype": "Select",
+   "label": "Has Custom Verification",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "documents_section",
+   "fieldtype": "Section Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "documents",
+   "fieldtype": "Table",
+   "label": "Documents",
+   "options": "Documents"
+  },
+  {
+   "fieldname": "record_keeping_section",
+   "fieldtype": "Section Break",
+   "label": "Record Keeping"
+  },
+  {
+   "fieldname": "inspection_log",
+   "fieldtype": "Small Text",
+   "label": "Inspection log"
+  },
+  {
+   "fieldname": "column_break_jnzy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "movement_log",
+   "fieldtype": "Small Text",
+   "label": "Movement log"
+  },
+  {
+   "fieldname": "notifications_section",
+   "fieldtype": "Section Break",
+   "label": "Notifications"
+  },
+  {
+   "default": "0",
+   "fieldname": "notify_clearing_agent",
+   "fieldtype": "Check",
+   "label": "Notify Clearing Agent"
+  },
+  {
+   "default": "0",
+   "fieldname": "notify_consignee",
+   "fieldtype": "Check",
+   "label": "Notify Consignee"
+  },
+  {
+   "fieldname": "notification_method",
+   "fieldtype": "Select",
+   "label": "Notification Method",
+   "options": "Email\nSlack\nSystem Notification\nSMS"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-31 13:37:13.488664",
+ "modified_by": "Administrator",
+ "module": "ICD",
+ "name": "In Yard Container Booking",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

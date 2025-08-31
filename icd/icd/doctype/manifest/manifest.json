@@ -1,0 +1,196 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-30 17:51:52.723814",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_bxl2",
+  "upload_manifest",
+  "amended_from",
+  "column_break_zkut",
+  "company",
+  "naming_series",
+  "vessel_information_section",
+  "mrn",
+  "vessel_name",
+  "call_sign",
+  "column_break_ufus",
+  "voyage",
+  "tpa_uid",
+  "column_break_pctw",
+  "arrival_date",
+  "port",
+  "containers_section_tab",
+  "containers",
+  "hbl_containers_tab",
+  "hbl_conatiners",
+  "master_bl_tab",
+  "master_bl",
+  "house_bl_tab",
+  "table_axve"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_bxl2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Manifest",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "upload_manifest",
+   "fieldtype": "Attach",
+   "label": "Upload Manifest"
+  },
+  {
+   "fieldname": "column_break_zkut",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "vessel_information_section",
+   "fieldtype": "Section Break",
+   "label": "Vessel Information"
+  },
+  {
+   "fieldname": "mrn",
+   "fieldtype": "Data",
+   "label": "MRN"
+  },
+  {
+   "fieldname": "vessel_name",
+   "fieldtype": "Data",
+   "label": "Vessel Name"
+  },
+  {
+   "fieldname": "call_sign",
+   "fieldtype": "Data",
+   "label": "Call Sign"
+  },
+  {
+   "fieldname": "column_break_ufus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "voyage",
+   "fieldtype": "Data",
+   "label": "Voyage"
+  },
+  {
+   "fieldname": "tpa_uid",
+   "fieldtype": "Data",
+   "label": "TPA UID"
+  },
+  {
+   "fieldname": "column_break_pctw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Now",
+   "fieldname": "arrival_date",
+   "fieldtype": "Date",
+   "label": "Arrival Date"
+  },
+  {
+   "fieldname": "port",
+   "fieldtype": "Select",
+   "label": "Port",
+   "options": "\nDP WORLD\nTEAGTL"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "ICS-M-.YYYY.-"
+  },
+  {
+   "fieldname": "containers_section_tab",
+   "fieldtype": "Tab Break",
+   "label": "Containers Section"
+  },
+  {
+   "fieldname": "hbl_containers_tab",
+   "fieldtype": "Tab Break",
+   "label": "HBL Containers"
+  },
+  {
+   "fieldname": "master_bl_tab",
+   "fieldtype": "Tab Break",
+   "label": "Master BL"
+  },
+  {
+   "fieldname": "house_bl_tab",
+   "fieldtype": "Tab Break",
+   "label": "House BL"
+  },
+  {
+   "fieldname": "containers",
+   "fieldtype": "Table",
+   "label": "Containers",
+   "options": "Containers"
+  },
+  {
+   "fieldname": "hbl_conatiners",
+   "fieldtype": "Table",
+   "label": "HBL Conatiners",
+   "options": "HBL Conatiners"
+  },
+  {
+   "fieldname": "master_bl",
+   "fieldtype": "Table",
+   "label": "Master BL",
+   "options": "Master BL"
+  },
+  {
+   "fieldname": "table_axve",
+   "fieldtype": "Table",
+   "options": "House BL"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-31 06:40:29.339039",
+ "modified_by": "Administrator",
+ "module": "ICD",
+ "name": "Manifest",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

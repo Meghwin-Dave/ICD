@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-30 18:14:42.483320",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "m_bl_no",
+  "h_bl_no",
+  "place_of_destination",
+  "number_of_containers",
+  "number_of_package"
+ ],
+ "fields": [
+  {
+   "fieldname": "m_bl_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "M B/L No"
+  },
+  {
+   "fieldname": "h_bl_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "H B/L No"
+  },
+  {
+   "fieldname": "place_of_destination",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Place of Destination"
+  },
+  {
+   "fieldname": "number_of_containers",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Number of containers"
+  },
+  {
+   "fieldname": "number_of_package",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Number of Package"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-30 18:16:08.660660",
+ "modified_by": "Administrator",
+ "module": "ICD",
+ "name": "House BL",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

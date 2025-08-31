@@ -1,0 +1,30 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2025-08-31 12:06:04.791412",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{}",
+ "letter_head": "Dashqube",
+ "letterhead": null,
+ "modified": "2025-08-31 12:06:33.422596",
+ "modified_by": "Administrator",
+ "module": "ICD",
+ "name": "Container Booking",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Container Details",
+ "report_name": "Container Booking",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}

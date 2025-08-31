@@ -1,0 +1,388 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-30 19:05:55.388398",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_kcvy",
+  "amended_from",
+  "movement_order",
+  "manifest",
+  "company",
+  "column_break_cbgz",
+  "ship",
+  "port",
+  "voyage_no",
+  "column_break_jvbi",
+  "received_date",
+  "ship_dc_date",
+  "column_break_vtdn",
+  "icd_time_in",
+  "port_time_out",
+  "container_particular_tab",
+  "m_bl_no",
+  "container_no",
+  "container_size_ft",
+  "container_count",
+  "column_break_eclz",
+  "weight",
+  "weight_unit",
+  "cargo_type",
+  "seal_no1",
+  "freight_indicator",
+  "column_break_xaav",
+  "transporter",
+  "truck",
+  "trailer",
+  "driver",
+  "driver_license",
+  "column_break_ckdu",
+  "container_location",
+  "abbr_for_destination",
+  "place_of_destination",
+  "country_of_destination",
+  "container_condition_section",
+  "top",
+  "bottom",
+  "column_break_qlek",
+  "front",
+  "rear",
+  "column_break_mgrr",
+  "right_side",
+  "left_side",
+  "personal_and_security_tab",
+  "clerk",
+  "clerk_name",
+  "column_break_nfpv",
+  "security_officer",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_kcvy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Container Reception",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "movement_order",
+   "fieldtype": "Link",
+   "label": "Movement Order",
+   "options": "Container Movement Order"
+  },
+  {
+   "fetch_from": "movement_order.manifest",
+   "fieldname": "manifest",
+   "fieldtype": "Link",
+   "label": "Manifest",
+   "options": "Manifest"
+  },
+  {
+   "fetch_from": "movement_order.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_cbgz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "movement_order.ship",
+   "fieldname": "ship",
+   "fieldtype": "Data",
+   "label": "Ship"
+  },
+  {
+   "fetch_from": "movement_order.port",
+   "fieldname": "port",
+   "fieldtype": "Data",
+   "label": "Port"
+  },
+  {
+   "fieldname": "column_break_jvbi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Carry in Date",
+   "fetch_from": "manifest.arrival_date",
+   "fieldname": "received_date",
+   "fieldtype": "Date",
+   "label": "Received Date"
+  },
+  {
+   "description": "Ship Arrival Date",
+   "fetch_from": "movement_order.ship_dc_date",
+   "fieldname": "ship_dc_date",
+   "fieldtype": "Date",
+   "label": "Ship D/C Date"
+  },
+  {
+   "fieldname": "column_break_vtdn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "movement_order.icd_time_in",
+   "fieldname": "icd_time_in",
+   "fieldtype": "Time",
+   "label": "ICD Time In"
+  },
+  {
+   "fetch_from": "movement_order.port_time_out",
+   "fieldname": "port_time_out",
+   "fieldtype": "Time",
+   "label": "Port Time Out"
+  },
+  {
+   "fetch_from": "movement_order.voyage_no",
+   "fieldname": "voyage_no",
+   "fieldtype": "Data",
+   "label": "Voyage No"
+  },
+  {
+   "fieldname": "container_particular_tab",
+   "fieldtype": "Tab Break",
+   "label": "Container Particular"
+  },
+  {
+   "fieldname": "personal_and_security_tab",
+   "fieldtype": "Tab Break",
+   "label": "Personal And Security"
+  },
+  {
+   "fieldname": "m_bl_no",
+   "fieldtype": "Data",
+   "label": "M B/L No"
+  },
+  {
+   "fieldname": "container_no",
+   "fieldtype": "Data",
+   "label": "Container No"
+  },
+  {
+   "fieldname": "container_size_ft",
+   "fieldtype": "Date",
+   "label": "Container Size (FT)"
+  },
+  {
+   "description": "Based on M B/L No",
+   "fieldname": "container_count",
+   "fieldtype": "Data",
+   "label": "Container Count"
+  },
+  {
+   "fieldname": "column_break_eclz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xaav",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ckdu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "weight_unit",
+   "fieldtype": "Data",
+   "label": "Weight Unit"
+  },
+  {
+   "fieldname": "cargo_type",
+   "fieldtype": "Data",
+   "label": "Cargo Type"
+  },
+  {
+   "fieldname": "seal_no1",
+   "fieldtype": "Data",
+   "label": "Seal No.1"
+  },
+  {
+   "fieldname": "freight_indicator",
+   "fieldtype": "Data",
+   "label": "Freight Indicator"
+  },
+  {
+   "fieldname": "transporter",
+   "fieldtype": "Link",
+   "label": "Transporter",
+   "options": "Transporter"
+  },
+  {
+   "fieldname": "truck",
+   "fieldtype": "Link",
+   "label": "Truck",
+   "options": "Vehicle"
+  },
+  {
+   "fieldname": "trailer",
+   "fieldtype": "Link",
+   "label": "Trailer",
+   "options": "Vehicle"
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "options": "Driver"
+  },
+  {
+   "fieldname": "driver_license",
+   "fieldtype": "Data",
+   "label": "Driver License "
+  },
+  {
+   "fieldname": "container_location",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Container Location",
+   "options": "Container Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "abbr_for_destination",
+   "fieldtype": "Data",
+   "label": "Abbr For Destination"
+  },
+  {
+   "fieldname": "place_of_destination",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Place of Destination",
+   "options": "DCR\nOther\nLocal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "container_condition_section",
+   "fieldtype": "Section Break",
+   "label": "Container Condition"
+  },
+  {
+   "fieldname": "top",
+   "fieldtype": "Table MultiSelect",
+   "label": "Top",
+   "options": "Container State"
+  },
+  {
+   "fieldname": "bottom",
+   "fieldtype": "Table MultiSelect",
+   "label": "Bottom",
+   "options": "Container State"
+  },
+  {
+   "fieldname": "column_break_qlek",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "front",
+   "fieldtype": "Table MultiSelect",
+   "label": "Front",
+   "options": "Container State"
+  },
+  {
+   "fieldname": "rear",
+   "fieldtype": "Table MultiSelect",
+   "label": "Rear",
+   "options": "Container State"
+  },
+  {
+   "fieldname": "column_break_mgrr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "right_side",
+   "fieldtype": "Table MultiSelect",
+   "label": "Right Side",
+   "options": "Container State"
+  },
+  {
+   "fieldname": "left_side",
+   "fieldtype": "Table MultiSelect",
+   "label": "Left Side",
+   "options": "Container State"
+  },
+  {
+   "description": "For corridor Levy validate",
+   "fieldname": "country_of_destination",
+   "fieldtype": "Link",
+   "label": "Country of Destination",
+   "options": "Country"
+  },
+  {
+   "fieldname": "clerk",
+   "fieldtype": "Link",
+   "label": "Clerk",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_nfpv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "security_officer",
+   "fieldtype": "Link",
+   "label": "Security Officer",
+   "options": "Security Officer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "clerk.employee_name",
+   "fieldname": "clerk_name",
+   "fieldtype": "Data",
+   "label": "Clerk Name"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "ICS-CR-.YYYY.-"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-31 07:45:51.751543",
+ "modified_by": "Administrator",
+ "module": "ICD",
+ "name": "Container Reception",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

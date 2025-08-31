@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-31 00:15:44.117367",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "place_of_destination",
+  "charges",
+  "from",
+  "too"
+ ],
+ "fields": [
+  {
+   "fieldname": "place_of_destination",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Place of Destination"
+  },
+  {
+   "fieldname": "charges",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Charges"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "From"
+  },
+  {
+   "fieldname": "too",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Too"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-31 00:16:47.695536",
+ "modified_by": "Administrator",
+ "module": "ICD",
+ "name": "Storage Days",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

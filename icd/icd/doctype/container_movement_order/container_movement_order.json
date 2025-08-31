@@ -1,0 +1,276 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-30 18:22:32.919075",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_vd8c",
+  "manifest",
+  "company",
+  "status",
+  "column_break_wshk",
+  "m_bl_no",
+  "select_container",
+  "container_no",
+  "freight_indicator",
+  "column_break_gwhu",
+  "size_ft",
+  "cargo_type",
+  "amended_from",
+  "naming_series",
+  "section_break_gvdb",
+  "ship",
+  "port",
+  "voyage_no",
+  "column_break_fhpr",
+  "movement_date",
+  "ship_dc_date",
+  "column_break_fsis",
+  "icd_time_in",
+  "port_time_out",
+  "transport_details_section",
+  "tranporter",
+  "column_break_eswn",
+  "driver",
+  "drive_license",
+  "column_break_lkhr",
+  "truck",
+  "trailer",
+  "signatures_and_time_tab",
+  "signature",
+  "column_break_xtjy",
+  "time"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_vd8c",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Container Movement Order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "manifest",
+   "fieldtype": "Link",
+   "label": "Manifest",
+   "options": "Manifest"
+  },
+  {
+   "fieldname": "column_break_wshk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "select_container",
+   "fieldtype": "Button",
+   "label": "Select Container"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "depends_on": "manifest",
+   "fieldname": "m_bl_no",
+   "fieldtype": "Data",
+   "label": "M B/L No"
+  },
+  {
+   "fieldname": "container_no",
+   "fieldtype": "Data",
+   "label": "Container No."
+  },
+  {
+   "depends_on": "manifest",
+   "fieldname": "freight_indicator",
+   "fieldtype": "Data",
+   "label": "Freight Indicator"
+  },
+  {
+   "fieldname": "column_break_gwhu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "size_ft",
+   "fieldtype": "Data",
+   "label": "Size (FT)"
+  },
+  {
+   "depends_on": "manifest",
+   "fieldname": "cargo_type",
+   "fieldtype": "Data",
+   "label": "Cargo Type"
+  },
+  {
+   "fieldname": "section_break_gvdb",
+   "fieldtype": "Section Break",
+   "label": "Shipment Details"
+  },
+  {
+   "depends_on": "manifest",
+   "fieldname": "ship",
+   "fieldtype": "Data",
+   "label": "Ship"
+  },
+  {
+   "depends_on": "manifest",
+   "fetch_from": "manifest.port",
+   "fieldname": "port",
+   "fieldtype": "Data",
+   "label": "Port"
+  },
+  {
+   "fetch_from": "manifest.voyage",
+   "fieldname": "voyage_no",
+   "fieldtype": "Data",
+   "label": "Voyage No"
+  },
+  {
+   "fieldname": "column_break_fhpr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "movement_date",
+   "fieldtype": "Date",
+   "label": "Movement Date"
+  },
+  {
+   "description": "Ship Arrival Date",
+   "fetch_from": "manifest.arrival_date",
+   "fieldname": "ship_dc_date",
+   "fieldtype": "Date",
+   "label": "Ship D/C Date"
+  },
+  {
+   "fieldname": "column_break_fsis",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "icd_time_in",
+   "fieldtype": "Time",
+   "label": "ICD Time in"
+  },
+  {
+   "fieldname": "port_time_out",
+   "fieldtype": "Time",
+   "label": "Port Time Out"
+  },
+  {
+   "fieldname": "transport_details_section",
+   "fieldtype": "Section Break",
+   "label": "Transport Details"
+  },
+  {
+   "fieldname": "tranporter",
+   "fieldtype": "Link",
+   "label": "Tranporter",
+   "options": "Transporter"
+  },
+  {
+   "fieldname": "column_break_eswn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "tranporter",
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "options": "Driver"
+  },
+  {
+   "depends_on": "tranporter",
+   "fetch_from": "driver.license_number",
+   "fieldname": "drive_license",
+   "fieldtype": "Data",
+   "label": "Drive License"
+  },
+  {
+   "fieldname": "column_break_lkhr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "tranporter",
+   "fieldname": "truck",
+   "fieldtype": "Link",
+   "label": "Truck",
+   "options": "Vehicle"
+  },
+  {
+   "fieldname": "trailer",
+   "fieldtype": "Link",
+   "label": "Trailer",
+   "options": "Vehicle"
+  },
+  {
+   "fieldname": "signatures_and_time_tab",
+   "fieldtype": "Tab Break",
+   "label": "Signatures and Time"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_xtjy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nReceived"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming Series",
+   "options": "ICD-CMO-.YYYY.-"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-31 07:42:28.607780",
+ "modified_by": "Administrator",
+ "module": "ICD",
+ "name": "Container Movement Order",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

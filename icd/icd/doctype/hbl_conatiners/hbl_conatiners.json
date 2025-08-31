@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-30 18:07:36.418770",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "m_bl_no",
+  "h_bl_no",
+  "container_no",
+  "container_size",
+  "no_of_packages"
+ ],
+ "fields": [
+  {
+   "fieldname": "m_bl_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "M B/L No"
+  },
+  {
+   "fieldname": "h_bl_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "H B/L No"
+  },
+  {
+   "fieldname": "container_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Container No"
+  },
+  {
+   "fieldname": "container_size",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Container Size"
+  },
+  {
+   "fieldname": "no_of_packages",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "No of Packages"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-30 18:09:02.501929",
+ "modified_by": "Administrator",
+ "module": "ICD",
+ "name": "HBL Conatiners",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
