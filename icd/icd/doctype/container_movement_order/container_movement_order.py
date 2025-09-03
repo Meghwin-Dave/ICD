@@ -10,6 +10,7 @@ class ContainerMovementOrder(Document):
 
 import frappe
 from frappe.model.mapper import get_mapped_doc
+from frappe.query_builder import Table
 
 @frappe.whitelist()
 def make_container_reception(source_name, target_doc=None):
@@ -52,3 +53,43 @@ def make_container_reception(source_name, target_doc=None):
     )
 
     return doc
+
+
+@frappe.whitelist()
+def get_containers_for_manifest(manifest: str, m_bl_no_filter: str | None = None):
+    """Return list of containers from Manifest's child table `Containers`.
+
+    Optionally filter by a partial `m_bl_no` string.
+    """
+    if not manifest:
+        return []
+
+    t = Table("tabContainers")
+    query = (
+        frappe.qb.from_(t)
+        .select(
+            t.name,
+            t.container_no,
+            t.m_bl_no,
+            t.container_size,
+            t.freight_indicator,
+            t.type_of_container,
+            t.no_of_packages,
+            t.volume,
+            t.volume_unit,
+            t.weight,
+            t.weight_unit,
+            t.seal_no1,
+            t.seal_no2,
+            t.seal_no3,
+            t.plug_type_of_reefer,
+            t.minimum_temperature,
+            t.maximum_temperature,
+        )
+        .where((t.parent == manifest) & (t.parenttype == "Manifest"))
+    )
+
+    if m_bl_no_filter:
+        query = query.where(t.m_bl_no.like(f"%{m_bl_no_filter}%"))
+
+    return query.run(as_dict=True)

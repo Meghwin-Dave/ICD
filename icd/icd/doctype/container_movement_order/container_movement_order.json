@@ -17,6 +17,7 @@
   "freight_indicator",
   "column_break_gwhu",
   "size_ft",
+  "container_count",
   "cargo_type",
   "amended_from",
   "naming_series",
@@ -242,13 +243,20 @@
    "hidden": 1,
    "label": "naming Series",
    "options": "ICD-CMO-.YYYY.-"
+  },
+  {
+   "default": "1/1",
+   "fieldname": "container_count",
+   "fieldtype": "Data",
+   "label": "Container Count",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-08-31 07:42:28.607780",
+ "modified": "2025-09-03 14:27:59.872417",
  "modified_by": "Administrator",
  "module": "ICD",
  "name": "Container Movement Order",
