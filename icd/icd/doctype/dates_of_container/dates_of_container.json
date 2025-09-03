@@ -22,6 +22,7 @@
    "default": "0",
    "fieldname": "is_billable",
    "fieldtype": "Check",
+   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Is Billable"
   },
@@ -29,6 +30,7 @@
    "default": "0",
    "fieldname": "is_free",
    "fieldtype": "Check",
+   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Is Free"
   },
@@ -43,12 +45,13 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-08-30 20:16:37.962137",
+ "modified": "2025-09-03 13:53:53.172767",
  "modified_by": "Administrator",
  "module": "ICD",
  "name": "Dates of Container",
  "owner": "Administrator",
  "permissions": [],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

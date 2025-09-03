@@ -336,6 +336,7 @@
    "label": "Date Reference"
   },
   {
+   "default": "Today",
    "description": "Ship D/C Date",
    "fieldname": "arrival_date",
    "fieldtype": "Date",
@@ -347,6 +348,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "description": "Carry In Date",
    "fieldname": "received_date",
    "fieldtype": "Date",
@@ -358,6 +360,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "posting_date",
    "fieldtype": "Date",
    "label": "Posting Date",
@@ -547,14 +550,13 @@
    "fieldname": "date",
    "fieldtype": "Table",
    "label": "Date",
-   "options": "Dates of Container",
-   "read_only": 1
+   "options": "Dates of Container"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-31 13:28:07.085069",
+ "modified": "2025-09-03 14:19:06.867271",
  "modified_by": "Administrator",
  "module": "ICD",
  "name": "Container Details",
