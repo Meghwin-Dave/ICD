@@ -1,0 +1,13 @@
+{
+ "creation": "2025-09-16 23:34:46.543698",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2025-09-16 23:34:46.543698",
+ "modified_by": "Administrator",
+ "module": "ICD",
+ "name": "icd.api.containers_in_yard_by_status",
+ "owner": "Administrator",
+ "source_name": "icd.api.containers_in_yard_by_status",
+ "timeseries": 0
+}
