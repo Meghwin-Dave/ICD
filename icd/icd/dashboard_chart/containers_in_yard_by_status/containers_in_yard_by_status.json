@@ -21,7 +21,7 @@
  "owner": "Administrator",
  "parent_document_type": "",
  "roles": [],
- "source": "icd.icd.api.containers_in_yard_by_status",
+ "source": "icd.api.containers_in_yard_by_status",
  "time_interval": "Yearly",
  "timeseries": 0,
  "timespan": "Last Year",

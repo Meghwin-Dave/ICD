@@ -21,7 +21,7 @@
  "owner": "Administrator",
  "parent_document_type": "",
  "roles": [],
- "source": "icd.icd.api.daily_truck_entries_exits",
+ "source": "icd.api.daily_truck_entries_exits",
  "time_interval": "Daily",
  "timeseries": 1,
  "timespan": "Last Week",
